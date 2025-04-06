@@ -50,6 +50,17 @@ SELECT *
 FROM riders2
 WHERE total_trips < 500;
 
+-- Count the number of cars that are currently active
+SELECT COUNT(*)
+FROM cars
+WHERE status = 'active';
+
+-- Retrieve the top two cars with the highest number of trips completed
+SELECT *
+FROM cars
+ORDER BY trips_completed DESC
+LIMIT 2;
+
 -- Calculate the average cost of all trips
 SELECT AVG(cost)
 FROM trips;
