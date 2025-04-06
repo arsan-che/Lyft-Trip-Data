@@ -21,3 +21,17 @@ ON trips.car_id = cars.id;
 
 -- Identify primary key of trips
 PRAGMA table_info(trips);
+
+-- Combine all records from riders and riders2, removing duplicates
+SELECT * 
+FROM riders
+UNION
+SELECT *
+FROM riders2;
+
+-- Perform a cross join between riders and cars
+SELECT * FROM riders CROSS JOIN cars;
+
+-- Calculate the average cost of all trips
+SELECT AVG(cost)
+FROM trips;
